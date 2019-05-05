@@ -1,0 +1,23 @@
+WIZ
+
+MAIN STUFF:
+-player can teleport
+-both fairy and player can interact with stuff
+-puzzles can be solved by using fairy and player
+
+PLAYER STUFF:
+-player can teleport within a limited range
+-player CANNOT teleport through object in the (block) layer
+-player can activate pressure plates
+
+FAIRY STUFF:
+-fairy can pick up items with the tag (pickUp) in the (interactable) layer
+-fairy can activate magic circles by standing within its range
+
+ENEMY STUFF:
+-enemies can be defeated by teleporting through them
+-enemies will be distracted by fairy for a while if she enters a certain range
+-enemies can activate pressure plates
+-enemies can one-shot the player if the player is in a petrified state
+
+
