@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46adbe27425a63d409c471efaaf37009, type: 3}
-  m_Name: Normal
+  m_Script: {fileID: 11500000, guid: 286457c1885c0f24da2faa833ac7fc3b, type: 3}
+  m_Name: NormalChest
   m_EditorClassIdentifier: 
   Locked: 0
-  Sealed: 0

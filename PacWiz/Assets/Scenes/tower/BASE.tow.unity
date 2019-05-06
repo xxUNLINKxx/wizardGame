@@ -208,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 8755629986217773317, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8755629986217773316, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
         type: 3}
@@ -352,6 +352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneTransitionCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332926111542286087, guid: b7dc6d7560b5fd04db051a10c3887ddd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4332926111542286083, guid: b7dc6d7560b5fd04db051a10c3887ddd,
         type: 3}
