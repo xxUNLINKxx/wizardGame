@@ -169,7 +169,6 @@ GameObject:
   - component: {fileID: 5788615375606763173}
   - component: {fileID: 5788615375606763172}
   - component: {fileID: 5788615375606763178}
-  - component: {fileID: 5788615375606763174}
   - component: {fileID: 4917693442473878318}
   m_Layer: 11
   m_Name: rune
@@ -262,22 +261,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &5788615375606763174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788615375606763177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec3edbfa8f983cc4287c76b854544a28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  load: {fileID: 0}
-  fairy: {fileID: 0}
-  GetFairyMovement: {fileID: 0}
-  interact: {fileID: 11400000, guid: 557e4b38bb138a14aa8f46dc75a2beff, type: 2}
 --- !u!60 &4917693442473878318
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -295,7 +278,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6142857, y: 0.7}
+    oldSize: {x: 0.6047619, y: 0.67142856}
     newSize: {x: 0.6142857, y: 0.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

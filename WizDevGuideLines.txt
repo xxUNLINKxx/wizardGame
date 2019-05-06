@@ -20,4 +20,24 @@ ENEMY STUFF:
 -enemies can activate pressure plates
 -enemies can one-shot the player if the player is in a petrified state
 
+INTERACTABLES
+
+DOORS{
+NORMAL DOORS -can be opened normally
+LOCKED DOORS -needs a key to be opened
+SEALED DOORS -requires an action to be done to open(pressure plate, solve puzzle)
+}
+
+PRESSURE PLATES{
+NORMAL -can be activated by anything
+WEIGHTED -can only be activated by heavier objects(boxes,big enemies)
+}
+
+CHESTS{
+NORMAL -can be opened
+LOCKED -needs a key to open
+}
+
+
+
 
