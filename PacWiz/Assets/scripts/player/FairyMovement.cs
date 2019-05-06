@@ -15,7 +15,6 @@ public class FairyMovement : MonoBehaviour
 
     
     private teleportScript GetTeleportScript;
-    private interactable GetInteractable;
     [Header("Interactables")]
     public LayerMask interact;
 

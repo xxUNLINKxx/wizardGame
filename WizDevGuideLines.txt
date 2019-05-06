@@ -31,12 +31,19 @@ SEALED DOORS -requires an action to be done to open(pressure plate, solve puzzle
 PRESSURE PLATES{
 NORMAL -can be activated by anything
 WEIGHTED -can only be activated by heavier objects(boxes,big enemies)
+
+CHARACTER MASS:
+PLAYER-4
 }
 
 CHESTS{
 NORMAL -can be opened
 LOCKED -needs a key to open
 }
+
+
+
+
 
 
 
