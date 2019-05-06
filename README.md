@@ -1,2 +1,2 @@
 # wizardGame
-A repository of my puzzle game WarpWizard(name might change).
+A repository of my game WarpWizard(name might change).
