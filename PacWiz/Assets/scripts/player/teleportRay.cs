@@ -37,20 +37,13 @@ public class teleportRay : MonoBehaviour
 
     void ShootRayCast()
     {
+        Debug.DrawRay(firePoint.position, -firePoint.up, Color.red);
         //Searches for block layerMask
-        RaycastHit2D blockHitInfo = Physics2D.Raycast(firePoint.position, -firePoint.up, distance,block);
-        if (blockHitInfo)
-        {
-            teleport = false;
-        }
-        else
-        {
-            teleport = true;
-        }
+        RaycastHit2D blockHitInfo = Physics2D.Raycast(firePoint.position, -firePoint.up, distance,block);  
 
         //Searches for ground LayerMask
         RaycastHit2D groundHitInfo = Physics2D.Raycast(firePoint.position, -firePoint.up, distance, ground);
-        if (groundHitInfo)
+        if (groundHitInfo||blockHitInfo)
         {
             teleport = false;
         }

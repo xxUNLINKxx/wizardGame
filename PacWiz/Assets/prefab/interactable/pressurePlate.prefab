@@ -286,4 +286,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GetPlate: {fileID: 11400000, guid: 5214ae29a8a3d544cbbd410c89651da4, type: 2}
   activateObjects: []
-  otherPlates: []
+  otherPlates:
+  - {fileID: 2517870015610778300}

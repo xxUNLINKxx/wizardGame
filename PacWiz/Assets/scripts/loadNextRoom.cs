@@ -14,10 +14,13 @@ public class loadNextRoom : MonoBehaviour
     public int floorIndex;
     public Animator transitionCanvas;
 
-
-    void Start()
+    private void Awake()
     {
         Base = gameObject.scene;
+    }
+    void Start()
+    {
+        
         scenesInFloor = floor.scenesInFloor;      
         if (Application.isEditor)
         {

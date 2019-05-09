@@ -5,7 +5,6 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public loadNextRoom GetLoad;
-    public doorScriptable GetDoor;
     public SpriteRenderer Lock;
     public Sprite[] lockSprites;
     public bool locked;
@@ -13,8 +12,6 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         GetLoad = GameObject.Find("LoadLevel").GetComponent<loadNextRoom>();
-        bool locked = GetDoor.Locked;
-        bool seal = GetDoor.Sealed;
     }
 
     private void Update()

@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &91257251 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4332926110604916383, guid: b7dc6d7560b5fd04db051a10c3887ddd,
+    type: 3}
+  m_PrefabInstance: {fileID: 4332926110559801148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8445292227557748756, guid: 39ac5514e555ad445bda7f380779fd3f,
@@ -283,6 +289,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8755629986217773319, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
+        type: 3}
+      propertyPath: floor
+      value: 
+      objectReference: {fileID: 11400000, guid: 78d1341bc88b8da438fdfc1696ba6b51,
+        type: 2}
+    - target: {fileID: 8755629986217773319, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
+        type: 3}
+      propertyPath: transitionCanvas
+      value: 
+      objectReference: {fileID: 91257251}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239, type: 3}
 --- !u!1001 &1917142210532765700

@@ -44,6 +44,7 @@ public class PlateScript : MonoBehaviour
 
     void Activate()
     {
+
         foreach(GameObject obj in activateObjects)
         {
             //for Moving Platforms only
@@ -51,6 +52,11 @@ public class PlateScript : MonoBehaviour
             {
                 obj.GetComponent<MovingPlatformScript>().enabled = true;
             }
+            //for MechDoors
+            if (obj.GetComponent<MechDoorScript>() != null)
+            {
+                obj.GetComponent<MechDoorScript>().Activate();
+            }       
         }
     }
     void Deactivate()
@@ -61,6 +67,11 @@ public class PlateScript : MonoBehaviour
             if (obj.GetComponent<MovingPlatformScript>() != null)
             {
                 obj.GetComponent<MovingPlatformScript>().enabled = false;
+            }
+            //for MechDoors
+            if (obj.GetComponent<MechDoorScript>() != null)
+            {
+                obj.GetComponent<MechDoorScript>().Deactivate();
             }
         }
     }
