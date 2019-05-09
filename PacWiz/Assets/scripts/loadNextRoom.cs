@@ -8,14 +8,16 @@ using UnityEngine.SceneManagement;
 
 public class loadNextRoom : MonoBehaviour
 {
+    public Scene Base;
     public level floor;
     public String[] scenesInFloor;
     public int floorIndex;
     public Animator transitionCanvas;
-    public bool killPlayer;
+
 
     void Start()
     {
+        Base = gameObject.scene;
         scenesInFloor = floor.scenesInFloor;      
         if (Application.isEditor)
         {
@@ -29,7 +31,7 @@ public class loadNextRoom : MonoBehaviour
                 }
             }
         }
-        StartCoroutine(LoadNextRoom(floorIndex));
+        StartCoroutine(LoadNextRoom(floorIndex));     
     }
 
     //loads next room in floor

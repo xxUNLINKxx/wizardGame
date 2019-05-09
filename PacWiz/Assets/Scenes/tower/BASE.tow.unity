@@ -112,12 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &91257251 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4332926110604916383, guid: b7dc6d7560b5fd04db051a10c3887ddd,
-    type: 3}
-  m_PrefabInstance: {fileID: 4332926110559801148}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8445292227557748756, guid: 39ac5514e555ad445bda7f380779fd3f,
@@ -193,6 +187,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ca3a28d5d17ea4f8497cfb30d5acf9, type: 3}
+--- !u!1 &1887019150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1685242310076340126, guid: 31ca3a28d5d17ea4f8497cfb30d5acf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887019149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1887019151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887019150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886ccb5415ec2f040b0fd3d816421da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMat:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0a6195d15b502a142aa99cbbf19ec8ae, type: 2}
+  interactable:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1001 &2051761791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 8755629986217773317, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8755629986217773316, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
         type: 3}
@@ -265,11 +283,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8755629986217773319, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239,
-        type: 3}
-      propertyPath: transitionCanvas
-      value: 
-      objectReference: {fileID: 91257251}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0e6e45ce4ae8a46bd3afa6879ef239, type: 3}
 --- !u!1001 &1917142210532765700
@@ -356,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 4332926111542286087, guid: b7dc6d7560b5fd04db051a10c3887ddd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4332926111542286083, guid: b7dc6d7560b5fd04db051a10c3887ddd,
         type: 3}
