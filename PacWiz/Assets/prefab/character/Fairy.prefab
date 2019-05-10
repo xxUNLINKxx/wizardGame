@@ -119,8 +119,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   speed: 2
-  grabDistance: 0.5
   holdpoint: {fileID: 6953421220832602575}
+  rf_objInHold: 0.1
   toggle: 1
 --- !u!1 &7756415106104404849
 GameObject:

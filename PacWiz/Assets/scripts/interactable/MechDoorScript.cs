@@ -7,6 +7,7 @@ public class MechDoorScript : MonoBehaviour
     
     private Animator anim;
     private BoxCollider2D box;
+    public bool inverse;
 
     private void Start()
     {
@@ -15,12 +16,30 @@ public class MechDoorScript : MonoBehaviour
     }
     public void Activate()
     {
-        anim.SetBool("open", true);
-        box.enabled = false;
+        if (inverse)
+        {
+            anim.SetBool("open", false);
+            box.enabled = true;
+        }
+        else
+        {
+            anim.SetBool("open", true);
+            box.enabled = false;
+        }
+
     }
     public void Deactivate()
     {
-        anim.SetBool("open", false);
-        box.enabled = true;
+        if (inverse)
+        {
+            anim.SetBool("open", true);
+            box.enabled = false;
+        }
+        else
+        {
+            anim.SetBool("open", false);
+            box.enabled = true;
+        }
+
     }
 }

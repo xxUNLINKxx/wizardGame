@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b75d6d21e4f72c40987c3a3651d277e, type: 3}
   m_Name: NormalPlate
   m_EditorClassIdentifier: 
-  minWeight: 4
+  minWeight: 5

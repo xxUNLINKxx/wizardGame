@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300032, guid: 439e6c6bf4e48314086e29da75e1308c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300020, guid: 439e6c6bf4e48314086e29da75e1308c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetPlate: {fileID: 11400000, guid: 5214ae29a8a3d544cbbd410c89651da4, type: 2}
-  activateObjects: []
+  activateObjects:
+  - {fileID: 0}
   otherPlates:
-  - {fileID: 2517870015610778300}
+  - {fileID: 0}
+  activate: 0

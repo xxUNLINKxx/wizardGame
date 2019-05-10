@@ -27,6 +27,8 @@ public class FairyMovement : MonoBehaviour
     private bool lastpos;
     private Vector3 lastPosition;
     private GameObject objectInHold;
+    [Tooltip("rf = Range From")]
+    public float rf_objInHold;
 
     private Vector3 mousePos;
     private Transform tel;
@@ -86,8 +88,9 @@ public class FairyMovement : MonoBehaviour
             }
             else
             {
-                transform.position = Vector2.Lerp(transform.position, tel.position, (speed * 2) * Time.deltaTime);
+                Move();
                 objectInHold.gameObject.GetComponent<Rigidbody2D>().velocity= (holdpoint.position-objectInHold.transform.position)*20;
+                objectInHold.gameObject.GetComponent<Rigidbody2D>().rotation = 0;
             }
                 
         }
@@ -137,6 +140,7 @@ public class FairyMovement : MonoBehaviour
                 grabbed = false;
                 toggle = true;
                 objectInHold.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                objectInHold.gameObject.GetComponent<Rigidbody2D>().rotation = 0;
             }
         }          
     }
@@ -152,6 +156,23 @@ public class FairyMovement : MonoBehaviour
             sr.flipX = true;
             facingLeft = !facingLeft;
         }
+    }
+
+    void Move()
+    {
+        float distance = Vector2.Distance(holdpoint.position, objectInHold.transform.position);
+        if (distance > rf_objInHold)
+        {
+            Vector3 fromFtoObj = transform.position - objectInHold.transform.position;
+            fromFtoObj *= rf_objInHold / distance;
+            Vector2 edge = objectInHold.transform.position + fromFtoObj;
+            transform.position = Vector2.Lerp(edge, tel.position, speed * 2 * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector2.Lerp(transform.position, tel.position, speed * 2 * Time.deltaTime);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

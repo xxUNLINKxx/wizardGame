@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6548000774765704317}
   - component: {fileID: 6548000774765704318}
   m_Layer: 0
-  m_Name: castlegrounds_1_4
+  m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 6548000776625628369}
   - component: {fileID: 6548000776625628370}
   m_Layer: 0
-  m_Name: castlegrounds_1_3
+  m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
