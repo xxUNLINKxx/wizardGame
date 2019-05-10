@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6953421220832602575}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: pickUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7756415105946325199}
   - component: {fileID: 6766021585640556284}
   - component: {fileID: 7756415105946325198}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fairy
   m_TagString: Fairy
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 7756415106104404863}
   - component: {fileID: 7756415106104404848}
   - component: {fileID: 7756415106104404861}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: fairyAnim_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2269903646755963901}
   - component: {fileID: 4268644092146699192}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,6 +386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6936529594284713135, guid: d5f39c68ee0293e49a70467231bc25b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7342260775975820645, guid: d5f39c68ee0293e49a70467231bc25b6,
         type: 3}
