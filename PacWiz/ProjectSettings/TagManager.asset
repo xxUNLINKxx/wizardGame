@@ -24,7 +24,7 @@ TagManager:
   - interactable
   - FAIRY
   - ground(passable)
-  - 
+  - destroyPart
   - 
   - 
   - 

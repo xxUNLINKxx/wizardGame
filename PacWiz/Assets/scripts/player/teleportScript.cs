@@ -41,7 +41,7 @@ public class teleportScript : MonoBehaviour{
                     if (Input.GetMouseButtonDown(0))
                     {
                         transform.position = Camera.main.ScreenToWorldPoint(mousePos);
-                        startTimeBtwTel = timeBtwTel;
+                        startTimeBtwTel = timeBtwTel;         
                         magicCircle.SetBool("charging", true);
                     }   
                 }                 
