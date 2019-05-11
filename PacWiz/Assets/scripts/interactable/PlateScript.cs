@@ -7,10 +7,16 @@ public class PlateScript : MonoBehaviour
     public plateScriptable GetPlate;
     
 
-    public bool activate=false;    
+    public bool activate=false;
+    private int entityCount;
 
-    
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.attachedRigidbody.mass >= GetPlate.minWeight)
+        {
+            entityCount += 1;
+        }
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.attachedRigidbody.mass >= GetPlate.minWeight)
@@ -20,12 +26,14 @@ public class PlateScript : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other != null)
+        if (other.attachedRigidbody.mass >= GetPlate.minWeight)
         {
-            if (other.attachedRigidbody.mass >= GetPlate.minWeight)
-            {
-                activate = false;
-            }
-        }      
+            entityCount -= 1;
+        }
+        if (entityCount == 0)
+        {
+            activate = false;
+        }
+            
     }
 }

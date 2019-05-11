@@ -23,7 +23,7 @@ TagManager:
   - postProcess
   - interactable
   - FAIRY
-  - 
+  - ground(passable)
   - 
   - 
   - 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2993643842335766724}
   - component: {fileID: 6479263666261123898}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: New Sprite Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6548000774765704317}
   - component: {fileID: 6548000774765704318}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6548000776368750508}
   - component: {fileID: 5153198622078411749}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6548000776481762688}
   - component: {fileID: 6548000776481762689}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: castlegrounds_1_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6548000776625628369}
   - component: {fileID: 6548000776625628370}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

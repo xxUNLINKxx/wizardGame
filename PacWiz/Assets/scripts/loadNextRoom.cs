@@ -46,7 +46,7 @@ public class loadNextRoom : MonoBehaviour
     public IEnumerator LoadNextRoom(int sceneArrayIndex)
     {
         
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.7f);
         transitionCanvas.SetBool("loading", true);
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1.2f);
