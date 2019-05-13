@@ -11,7 +11,7 @@ public class teleportRay : MonoBehaviour
     teleportScript TeleportScript;
 
     //for raycast
-    public Transform firePoint;
+    public GameObject firePoint;
     public LayerMask block;
     public LayerMask ground;
     private GameObject CENTER;
@@ -31,18 +31,17 @@ public class teleportRay : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         gameObject.transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-        ShootRayCast();
-        
+        ShootRayCast();   
     }
 
     void ShootRayCast()
     {
-        Debug.DrawRay(firePoint.position, -firePoint.up, Color.red);
+        Debug.DrawRay(CENTER.transform.position, CENTER.transform.right, Color.red);
         //Searches for block layerMask
-        RaycastHit2D blockHitInfo = Physics2D.Raycast(firePoint.position, -firePoint.up, distance,block);  
+        RaycastHit2D blockHitInfo = Physics2D.Raycast(CENTER.transform.position, CENTER.transform.right, distance,block);
 
         //Searches for ground LayerMask
-        RaycastHit2D groundHitInfo = Physics2D.Raycast(firePoint.position, -firePoint.up, distance, ground);
+        RaycastHit2D groundHitInfo = Physics2D.Raycast(CENTER.transform.position, CENTER.transform.right, distance, ground);
         if (groundHitInfo||blockHitInfo)
         {
             teleport = false;
@@ -52,6 +51,4 @@ public class teleportRay : MonoBehaviour
             teleport = true;
         }
     }
-
-
 }

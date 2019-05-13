@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public loadNextRoom GetLoad;
+    private FairyMovement GetFairy;
     public SpriteRenderer Lock;
     public Sprite[] lockSprites;
     public bool locked;
@@ -12,6 +13,7 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         GetLoad = GameObject.Find("LoadLevel").GetComponent<loadNextRoom>();
+        GetFairy = GameObject.Find("Fairy").GetComponent<FairyMovement>();
     }
 
     private void Update()
@@ -49,6 +51,9 @@ public class DoorScript : MonoBehaviour
         {   
             if (!locked && !seal)
             {
+                GetFairy.selected = false;
+                GetFairy.toggle = true;
+                GetFairy.FollowPlayer();
                 GetLoad.LoadNext();
             }
         }

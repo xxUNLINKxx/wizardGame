@@ -49,7 +49,7 @@ public class loadNextRoom : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.7f);
         transitionCanvas.SetBool("loading", true);
         Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(1.2f);
+        yield return new WaitForSecondsRealtime(1.5f);
         if (sceneArrayIndex > 0)
         {
             yield return SceneManager.UnloadSceneAsync(scenesInFloor[(sceneArrayIndex-1)]);//unloads previous scene

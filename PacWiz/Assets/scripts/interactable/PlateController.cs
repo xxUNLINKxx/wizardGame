@@ -5,24 +5,34 @@ using UnityEngine;
 public class PlateController : MonoBehaviour
 {
     [Header("Parent of all pp's")]
+    public bool any;
     public GameObject[] activateObjects;
     public PlateScript[] otherPlates;
 
+    public int i;
+
     private void Update()
     {
-
-        foreach(PlateScript ps in otherPlates)
+        if (!any)
         {
-            if (ps.activate)
+            foreach(PlateScript ps in otherPlates)
             {
-                Activate();
-            }
-            else
-            {
-                Deactivate();
-                break;
+                if (ps.activate)
+                {
+                    Activate();
+                }
+                else
+                {
+                    Deactivate();
+                    break;
+                }
             }
         }
+        else
+        {
+               
+        }
+
     }
 
     void Activate()

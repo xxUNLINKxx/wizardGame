@@ -12,7 +12,8 @@ public class teleportScript : MonoBehaviour{
     private teleportRay teleportRayScript;
     private GameObject CENTER;
     public GameObject tel;
-   
+
+    public Transform telLine;
     public float Range;
     public float distance;
 
@@ -20,14 +21,19 @@ public class teleportScript : MonoBehaviour{
     {
         magicCircle = GameObject.Find("magicC").GetComponent<Animator>();
         teleportRayScript = GameObject.Find("raycast").GetComponent<teleportRay>();
-        CENTER = GameObject.Find("raycast");
+        
     }
     void Update()
+    {
+        Teleport();
+        CastLine();
+    }
+    void Teleport()
     {
         mousePos = Input.mousePosition;
         mousePos.z = 10;
         tel.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
-        distance = Vector2.Distance(tel.transform.position, CENTER.transform.position);
+        distance = Vector2.Distance(tel.transform.position, transform.position);
 
 
 
@@ -43,14 +49,34 @@ public class teleportScript : MonoBehaviour{
                         transform.position = Camera.main.ScreenToWorldPoint(mousePos);
                         startTimeBtwTel = timeBtwTel;         
                         magicCircle.SetBool("charging", true);
-                    }   
-                }                 
+                    }
+                }                
             }              
         }
         else
         {
             startTimeBtwTel -= Time.deltaTime;
         }                            
-        mousePos.Normalize();       
+        mousePos.Normalize();
+    }
+    void CastLine()
+    {
+        if (distance < Range)
+        {
+            telLine.localScale = new Vector3(Mathf.Abs(distance), 1, 1);
+        }
+        else
+        {
+            telLine.localScale = new Vector3(6, 1, 1);
+        }
+
+        if (!teleportRayScript.teleport|| distance>Range || startTimeBtwTel > 0)
+        {
+            telLine.GetComponentInChildren<SpriteRenderer>().color = new Color32(255,0,0,100);
+        }
+        else
+        {
+            telLine.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        }
     }
 }

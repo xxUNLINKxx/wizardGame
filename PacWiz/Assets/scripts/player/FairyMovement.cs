@@ -9,7 +9,7 @@ public class FairyMovement : MonoBehaviour
     public SpriteRenderer sr;
     private Rigidbody2D rb;
     //fairypositions
-    private GameObject[] fairyPos;
+    public GameObject[] fairyPos;
     private int Rand;
     private float randTimeB4NextPos;
 
@@ -21,7 +21,7 @@ public class FairyMovement : MonoBehaviour
     [Header("Fairy")]
     public float speed;
     RaycastHit2D mouse;
-    private bool selected;
+    public bool selected;
     private bool grabbed;
     public Transform holdpoint;
     private bool lastpos;
@@ -96,7 +96,7 @@ public class FairyMovement : MonoBehaviour
         }
         
     }
-    void FollowPlayer()
+    public void FollowPlayer()
     {
         Flip();
         if (randTimeB4NextPos <= 0)
