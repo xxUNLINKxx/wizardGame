@@ -16,6 +16,8 @@ public class teleportRay : MonoBehaviour
     public LayerMask ground;
     private GameObject CENTER;
 
+    public LineRenderer lr;
+
     private void Start()
     {
         TeleportScript = GameObject.Find("Player").GetComponent<teleportScript>();
@@ -36,19 +38,39 @@ public class teleportRay : MonoBehaviour
 
     void ShootRayCast()
     {
+        lr.SetPosition(0, firePoint.transform.position);
         Debug.DrawRay(CENTER.transform.position, CENTER.transform.right, Color.red);
         //Searches for block layerMask
         RaycastHit2D blockHitInfo = Physics2D.Raycast(CENTER.transform.position, CENTER.transform.right, distance,block);
 
         //Searches for ground LayerMask
         RaycastHit2D groundHitInfo = Physics2D.Raycast(CENTER.transform.position, CENTER.transform.right, distance, ground);
-        if (groundHitInfo||blockHitInfo)
-        {
-            teleport = false;
+
+        if (distance > TeleportScript.Range) {
+            lr.enabled = false;
         }
         else
         {
-            teleport = true;
+            lr.enabled = true;
+            if (groundHitInfo||blockHitInfo)
+            {
+                teleport = false;
+                if (groundHitInfo)
+                {
+                    lr.SetPosition(1, groundHitInfo.point);
+                }
+                if (blockHitInfo)
+                {
+                    lr.SetPosition(1, blockHitInfo.point);
+                }
+            
+            }
+            else
+            {
+                teleport = true;
+                lr.SetPosition(1, TeleportScript.tel.transform.position);
+            }
         }
+
     }
 }
