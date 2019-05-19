@@ -680,6 +680,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d2865aa3216a314687ad72936a2b293, type: 3}
+--- !u!114 &846731425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7756415105946325198, guid: 5d2865aa3216a314687ad72936a2b293,
+    type: 3}
+  m_PrefabInstance: {fileID: 416540575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a940f80f64d6eef49986a697cbeec5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &932447151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1396,6 +1408,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3295310310718892895, guid: e140691c522b94f498fca0eee3afe0cc,
+        type: 3}
+      propertyPath: GetFairy
+      value: 
+      objectReference: {fileID: 846731425}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e140691c522b94f498fca0eee3afe0cc, type: 3}
 --- !u!4 &1824638499 stripped

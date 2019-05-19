@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetLoad: {fileID: 0}
-  GetDoor: {fileID: 11400000, guid: 2fbbb404789156848b4952e2b459283b, type: 2}
+  GetFairy: {fileID: 0}
   Lock: {fileID: 893132569477729359}
   lockSprites:
   - {fileID: 21300002, guid: 439e6c6bf4e48314086e29da75e1308c, type: 3}

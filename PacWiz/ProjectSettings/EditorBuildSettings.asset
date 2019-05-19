@@ -32,7 +32,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/tower/floor2/floor.tow.2.3.unity
     guid: dda5e6f7d9e7a6549a36991856d34bc2
-  - enabled: 1
-    path: Assets/Scenes/tower/floor2/floor.tow.2.5.unity
-    guid: 5f14c359aaeb01f4b922d67c77a1b685
   m_configObjects: {}

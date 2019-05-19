@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     public loadNextRoom GetLoad;
-    private FairyMovement GetFairy;
+    public FairyMovement GetFairy;
     public SpriteRenderer Lock;
     public Sprite[] lockSprites;
     public bool locked;
