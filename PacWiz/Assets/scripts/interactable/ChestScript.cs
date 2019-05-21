@@ -16,7 +16,7 @@ public class ChestScript : MonoBehaviour
     void Chest()
     {
         Transform playerPos = GameObject.Find("Player").transform;
-        Vector2 distance = new Vector2(Mathf.Abs(playerPos.position.x + 1), playerPos.position.y);
+        Vector2 spawnLocation = new Vector2(transform.position.x + 1.5f, transform.position.y+1);
         if (!locked)
         {
             if (lootAmt > 0)
@@ -24,11 +24,11 @@ public class ChestScript : MonoBehaviour
                 if (content.Length > 1)
                 {
                     int rand = Random.Range(0, content.Length + 1);
-                    Instantiate(content[rand], distance, Quaternion.Euler(new Vector3(0, 0, 0)));
+                    Instantiate(content[rand], spawnLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
                 }
                 else
                 {
-                    Instantiate(content[0], distance, Quaternion.Euler(new Vector3(0, 0, 0)));
+                    Instantiate(content[0], spawnLocation, Quaternion.Euler(new Vector3(0, 0, 0)));
                 }
             }
 

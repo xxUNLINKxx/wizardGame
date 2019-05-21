@@ -24,12 +24,15 @@ EditorBuildSettings:
     path: Assets/Scenes/tower/floor2/floor.tow.2.1.unity
     guid: 7e5461d5753fbc84283a62a1d84c52a6
   - enabled: 1
-    path: Assets/Scenes/tower/floor2/floor.tow.2.4.unity
-    guid: 68e880fc3423dce4186870f63140e1eb
-  - enabled: 1
     path: Assets/Scenes/tower/floor2/floor.tow.2.2.unity
     guid: 4c95fc680be6f0c40b1d5638a415ed49
   - enabled: 1
     path: Assets/Scenes/tower/floor2/floor.tow.2.3.unity
     guid: dda5e6f7d9e7a6549a36991856d34bc2
+  - enabled: 1
+    path: Assets/Scenes/tower/floor2/floor.tow.2.4.unity
+    guid: 68e880fc3423dce4186870f63140e1eb
+  - enabled: 1
+    path: Assets/Scenes/tower/floor2/floor.tow.2.5.unity
+    guid: e60a55df21609fd41ac3ae46377c3570
   m_configObjects: {}

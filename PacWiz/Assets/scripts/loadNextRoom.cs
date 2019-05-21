@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class loadNextRoom : MonoBehaviour
 {
-    private SAVE GetSAVE;
     public Scene Base;
     public level floor;
     public String[] scenesInFloor;
@@ -17,23 +16,9 @@ public class loadNextRoom : MonoBehaviour
     private void Awake()
     {
         Base = gameObject.scene;
-        //GetSAVE = GameObject.Find("SAVE").GetComponent<SAVE>();
-        //if (GetSAVE != null && GetSAVE.saved)
-        //{
-            //GetSAVE.LoadData();
-            //scenesInFloor = floor.scenesInFloor;
-        //}
     }
     void Start()
-    {
-
-        //if (GetSAVE.saved)
-        //{
-        //scenesInFloor = floor.scenesInFloor;
-        //StartCoroutine(LoadSavedRoom(floorIndex));
-        //}
-        //else 
-        //{   
+    { 
         scenesInFloor = floor.scenesInFloor;   
             if (Application.isEditor)
             {
@@ -48,25 +33,8 @@ public class loadNextRoom : MonoBehaviour
                 }
             }
             StartCoroutine(LoadNextRoom(floorIndex));
-        //}   
     }
 
-    public IEnumerator LoadSavedRoom(int sceneArrayIndex)
-    {
-        yield return new WaitForSecondsRealtime(0.7f);
-        transitionCanvas.SetBool("loading", true);
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(1.5f);
-        enabled = false;
-        yield return SceneManager.LoadSceneAsync(scenesInFloor[sceneArrayIndex], LoadSceneMode.Additive);//adds new scene       
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(scenesInFloor[sceneArrayIndex]));
-        yield return new WaitForSecondsRealtime(1.5f);
-        transitionCanvas.SetBool("loading", false);
-        yield return new WaitForSecondsRealtime(1.2f);
-
-        Time.timeScale = 1;
-        enabled = true;
-    }
     //loads next room in floor
     public void LoadNext()
     {

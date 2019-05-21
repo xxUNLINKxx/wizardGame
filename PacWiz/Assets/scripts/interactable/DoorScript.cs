@@ -12,8 +12,8 @@ public class DoorScript : MonoBehaviour
     public bool seal;
     void Start()
     {
-        GetLoad = GameObject.Find("LoadLevel").GetComponent<loadNextRoom>();
         GetFairy = GameObject.Find("Fairy").GetComponent<FairyMovement>();
+        GetLoad = GameObject.Find("LoadLevel").GetComponent<loadNextRoom>();
     }
 
     private void Update()
@@ -34,12 +34,12 @@ public class DoorScript : MonoBehaviour
         }
 
     }
-    void Unlock()
+    public void Unlock()
     {
         locked = false;
         Lock.sprite = null;
     }
-    void Unseal()
+    public void Unseal()
     {
         seal = false;
         Lock.sprite = null;
@@ -56,6 +56,11 @@ public class DoorScript : MonoBehaviour
                 GetFairy.FollowPlayer();
                 GetLoad.LoadNext();
             }
+        }
+
+        if(other.name.Contains("key"))
+        {
+            Unlock();
         }
         
     }
